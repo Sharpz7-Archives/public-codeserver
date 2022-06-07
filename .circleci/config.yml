@@ -9,7 +9,7 @@ workflows:
     jobs:
       - docker/create_multi
 
-      - docker/build_multi:
+      - docker/build_multi_large:
           requires:
             - docker/create_multi
           context: General
