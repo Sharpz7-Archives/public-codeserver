@@ -1,4 +1,4 @@
-Public Code Servers - An implementation of the [Code Server](https://github.com/coder/code-server)
+Public Code Servers - An implementation of [Code Server](https://github.com/coder/code-server)
 =================
 
 Access a version of VS Code on the web with a bunch of extra features and integrations.

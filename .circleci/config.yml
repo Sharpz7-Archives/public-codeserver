@@ -1,0 +1,15 @@
+version: 2.1
+
+orbs:
+  docker: sharptools/docker@volatile
+
+workflows:
+  version: 2
+  workflow:
+    jobs:
+      - docker/create_multi
+
+      - docker/build_multi:
+          requires:
+            - docker/create_multi
+          context: General

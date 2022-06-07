@@ -1,0 +1,25 @@
+version: "3"
+
+services:
+  codeserver:
+    hostname: codeserver
+    image: sharp6292/codeserver:${VERSION:?err}
+    environment:
+      - PASSWORD=${CODESERVER_PASS:?err}
+
+    volumes:
+      - "codeserver_home:/home/coder"
+      - "/var/run/docker.sock:/var/run/docker.sock"
+
+    command: code-server --auth password
+    restart: always
+
+volumes:
+  codeserver_home:
+    external: True
+
+
+networks:
+    default:
+        external:
+            name: sharpnet

@@ -1,0 +1,9 @@
+version: 1.1
+
+tasks:
+  public_codeserver:
+    name: Public Codeserver
+    envfile: .env
+    type: docker
+    giturl: https://raw.githubusercontent.com/Sharpz7/
+    compose: /public-codeserver/main/docker-compose.yml
