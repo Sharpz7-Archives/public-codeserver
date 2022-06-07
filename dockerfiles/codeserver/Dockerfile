@@ -88,7 +88,7 @@ RUN git clone https://github.com/tuanpham-dev/code-server-font-patch.git &&\
 COPY ./buildfiles/start.sh /start.sh
 COPY ./sharpnet/nginx.conf /sharpnet/nginx.conf
 
-RUN chmod +x /start.sh
+RUN sudo chmod +x /start.sh
 
 ENTRYPOINT ["/start.sh"]
 CMD [""]
