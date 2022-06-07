@@ -38,7 +38,7 @@ Installation
 - Make sure [SharpCD](https://github.com/Sharpz7/sharpcd) havs been installed.
 
 
-**Installing Dependencies**
+## Installing Dependencies
 
 - Ensure the enviromental variables have been set in an enviromental variable file:
 
@@ -83,7 +83,7 @@ NETWORK=sharpnet
 sharpcd --remotefile https://raw.githubusercontent.com/Sharpz7/vouch/main/.sharpcd/dependencies.sharpcd.yml
 ```
 
-**Installing a Codeserver**
+## Installing a Codeserver
 
 - Ensure the enviromental variables have been set in an enviromental variable file:
 
