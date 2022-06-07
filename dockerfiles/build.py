@@ -68,6 +68,7 @@ def main():
 
         with open(f'./builds/build-{num}.sh', 'w') as file:
             file.write(job_code)
+            print(shell)
 
 
 if __name__ == "__main__":
