@@ -65,21 +65,8 @@ RUN chown -R coder:coder /home/coder
 
 USER coder
 
-# Move Over Files
-COPY ./buildfiles/.ssh/ /home/coder/.ssh/
-COPY ./buildfiles/bin/ /home/coder/bin/
-
 # Set terminal commands and permissions
 RUN sudo sh -c "$(curl -fsSL https://raw.githubusercontent.com/robbyrussell/oh-my-zsh/master/tools/install.sh)" &&\
-    sudo chown coder:coder ~/bin/mcaq &&\
-    sudo chown coder:coder ~/bin/corporate1 &&\
-    sudo chmod u+x ~/bin/mcaq &&\
-    sudo chmod u+x ~/bin/corporate1 &&\
-    sudo chmod 700 /home/coder/.ssh &&\
-    sudo chmod 600 /home/coder/.ssh/mcaq.ssh &&\
-    sudo chmod 600 /home/coder/.ssh/corporate1.ssh &&\
-    sudo chmod 600 /home/coder/.ssh/github.ssh &&\
-    sudo chmod 600 /home/coder/.ssh/config &&\
     echo 'export PATH=/home/coder/bin/:$PATH' >> ~/.zshrc &&\
     echo 'export PATH=/home/coder/.local/bin/:$PATH' >> ~/.zshrc &&\
     echo 'export PATH=/usr/local/bin/:$PATH' >> .zshrc &&\

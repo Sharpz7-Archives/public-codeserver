@@ -87,7 +87,9 @@ sharpcd --remotefile https://raw.githubusercontent.com/Sharpz7/vouch/main/.sharp
 
 - Ensure the enviromental variables have been set in an enviromental variable file:
 
-- Use the $VERSION variable to set the version of Code Server you want to install.
+- Use the $VERSION variable to set the version of Code Server you want to install (i.e 4.4.0-python)
+
+**See the possible version tags [Here](https://hub.docker.com/repository/docker/sharp6292/codeserver)**
 
 ```env
 CODESERVER_PASS=<password>

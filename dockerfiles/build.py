@@ -17,8 +17,9 @@ class Build:
     Class for Build
     """
 
-    def __init__(self, _):
+    def __init__(self, folder):
         self.name = "codeserver"
+        self.folder = folder
         self.version = self.check_version()
 
     def check_version(self):
@@ -26,8 +27,8 @@ class Build:
         Reads for .version file
         """
 
-        if os.path.isfile(f"./{self.name}/.version"):
-            with open(f"./{self.name}/.version", 'r') as file:
+        if os.path.isfile(f"./{self.folder}/.version"):
+            with open(f"./{self.folder}/.version", 'r') as file:
                 return file.read()
 
         else:
@@ -58,7 +59,7 @@ def main():
                 f"docker login -u $DOCKER_USER -p $DOCKER_PASS"
                 f"docker pull sharp6292/{build.name}:{build.version} || true\n"
                 f"docker build --cache-from sharp6292/{build.name}:{build.version}"
-                f" -f dockerfiles/{build.name}/Dockerfile "
+                f" -f dockerfiles/{build.folder}/Dockerfile "
                 f"-t sharp6292/{build.name}:{build.version} .\n"
                 f"docker push sharp6292/{build.name}:{build.version}\n"
             )
