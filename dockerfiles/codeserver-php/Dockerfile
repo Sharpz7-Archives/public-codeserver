@@ -54,5 +54,12 @@ RUN git clone https://github.com/tuanpham-dev/code-server-font-patch.git &&\
     cd code-server-font-patch &&\
     sudo ./patch.sh
 
-# Add sharpnet file
+# Sharpnet Stuff
+COPY ./buildfiles/start.sh /start.sh
 COPY ./sharpnet/nginx.conf /sharpnet/nginx.conf
+
+RUN chmod +x /start.sh
+
+ENTRYPOINT ["/start.sh"]
+CMD [""]
+

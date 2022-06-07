@@ -94,6 +94,9 @@ sharpcd --remotefile https://raw.githubusercontent.com/Sharpz7/vouch/main/.sharp
 ```env
 CODESERVER_PASS=<password>
 VERSION=<version>
+
+# Domain(s) that the codeserver will be hosted on
+SHARPDOMAINS=<domain>
 ```
 
 - Run the following command to install Code Server:

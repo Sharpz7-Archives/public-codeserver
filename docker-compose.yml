@@ -6,6 +6,7 @@ services:
     image: sharp6292/codeserver:${VERSION:?err}
     environment:
       - PASSWORD=${CODESERVER_PASS:?err}
+      - SHARPDOMAINS=${SHARPDOMAINS:?err}
 
     volumes:
       - "codeserver_home:/home/coder"
