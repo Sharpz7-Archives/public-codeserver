@@ -102,5 +102,5 @@ SHARPDOMAINS=<domain>
 - Run the following command to install Code Server:
 
 ```bash
-sharpcd --remotefile https://raw.githubusercontent.com/Sharpz7/vouch/main/.sharpcd/sharpcd.yml
+sharpcd --remotefile https://raw.githubusercontent.com/Sharpz7/public-codeserver/main/.sharpcd/sharpcd.yml
 ```

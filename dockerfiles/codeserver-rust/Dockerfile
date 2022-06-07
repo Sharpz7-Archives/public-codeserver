@@ -47,7 +47,7 @@ RUN sudo sh -c "$(curl -fsSL https://raw.githubusercontent.com/robbyrussell/oh-m
 
 # Install Sharp Programs
 RUN sudo curl -s -L https://github.com/Sharpz7/sharpdev/releases/download/1.3/install.sh | sudo bash && \
-    sudo curl -s -L https://github.com/Sharpz7/sharpcd/releases/download/3.6/install.sh | sudo bash -s client
+    sudo curl -s -L https://github.com/Sharpz7/sharpcd/releases/download/3.7/install.sh | sudo bash -s client
 
 # Custom Fonts
 RUN git clone https://github.com/tuanpham-dev/code-server-font-patch.git &&\
