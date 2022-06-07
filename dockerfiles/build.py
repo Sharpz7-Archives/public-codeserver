@@ -61,6 +61,7 @@ def main():
                 f"docker build --cache-from sharp6292/{build.name}:{build.version}"
                 f" -f dockerfiles/{build.folder}/Dockerfile "
                 f"-t sharp6292/{build.name}:{build.version} .\n"
+                f"docker login -u $DOCKER_USER -p $DOCKER_PASS"
                 f"docker push sharp6292/{build.name}:{build.version}\n"
             )
             job_code += shell
