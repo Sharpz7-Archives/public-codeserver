@@ -8,17 +8,19 @@ services:
       - PASSWORD=${CODESERVER_PASS:?err}
       - SHARPDOMAINS=${SHARPDOMAINS:?err}
 
+    ports:
+      - "${PORT:-8080}:8080"
+
     volumes:
       - "codeserver_home:/home/coder"
       - "/var/run/docker.sock:/var/run/docker.sock"
 
-    command: code-server --auth password --host 0.0.0.0
+    command: code-server --auth password
     restart: always
 
 volumes:
   codeserver_home:
     external: True
-
 
 networks:
     default:
