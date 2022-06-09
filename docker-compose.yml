@@ -12,7 +12,7 @@ services:
       - "codeserver_home:/home/coder"
       - "/var/run/docker.sock:/var/run/docker.sock"
 
-    command: code-server --auth password
+    command: code-server --auth password --host 0.0.0.0
     restart: always
 
 volumes:
