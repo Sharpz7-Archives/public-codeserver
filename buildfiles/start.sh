@@ -4,9 +4,4 @@
 SHARPDOMAINS=$(echo $SHARPDOMAINS | sed 's/,/ /g')
 sudo sed -i "s/XXXXX/$SHARPDOMAINS/g" /sharpnet/nginx.conf
 
-# Check if PORT is set
-if [ -z "$PORT" ]; then
-    sudo sed -i "s/8080/$PORT/g" /sharpnet/nginx.conf
-fi
-
-code-server --auth password
+code-server --auth password --host 0.0.0.0
